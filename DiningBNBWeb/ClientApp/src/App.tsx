@@ -1,25 +1,28 @@
 import React from 'react';
 import logo from './logo.svg';
 import styles from './App.module.scss';
+import { Route, Switch } from 'react-router-dom';
+import LandingPage from './Pages/LandingPage/LandingPage';
+import Dashboard from './Pages/Dashboard/Dashboard.lazy';
+import Login from './Pages/Login/Login.lazy';
+import SignIn from './Pages/SignIn/SignIn.lazy';
 
 function App() {
   return (
-    <div className={styles.App}>
-      <header className={styles.AppHeader}>
-        <img src={logo} className={styles.AppLogo} alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className={styles.AppLink}
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Switch>
+      <Route exact path="/">
+        <LandingPage></LandingPage>
+      </Route>
+      <Route path="/dashboard">
+        <Dashboard></Dashboard>
+      </Route>
+      <Route path="/login">
+        <Login></Login>
+      </Route>
+      <Route path="/signin">
+        <SignIn></SignIn>
+      </Route>
+    </Switch>
   );
 }
 
