@@ -1,11 +1,11 @@
 import React from 'react';
 import logo from './logo.svg';
-import styles from './App.module.scss';
 import { Route, Switch } from 'react-router-dom';
 import LandingPage from './Pages/LandingPage/LandingPage';
 import Dashboard from './Pages/Dashboard/Dashboard.lazy';
 import Login from './Pages/Login/Login.lazy';
 import SignIn from './Pages/SignIn/SignIn.lazy';
+import './App.less';
 
 function App() {
   return (
