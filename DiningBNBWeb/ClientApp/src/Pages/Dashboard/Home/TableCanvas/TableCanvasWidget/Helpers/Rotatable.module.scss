@@ -1,0 +1,22 @@
+.Rotatable {
+    padding: 20px;
+}
+
+.RotateButton {
+    cursor: grab;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+}
+
+.InvisibleFullScreen {
+    position: absolute;
+    top: -100vh;
+    left: -100vw;
+    bottom: -100vw;
+    right: -100vh;
+    cursor: grabbing;
+    cursor: -moz-grabbing;
+    cursor: -webkit-grabbing;
+    z-index: 100;
+}
